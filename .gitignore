@@ -24,3 +24,12 @@ advent_of_code_2018-*.tar
 
 # Ignore configuration secrets
 /config/secrets.exs
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
