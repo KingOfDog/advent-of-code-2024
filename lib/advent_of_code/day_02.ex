@@ -25,11 +25,10 @@ defmodule AdventOfCode.Day02 do
       numbers = String.split(line) |> Enum.map(fn x -> Integer.parse(x) |> elem(0) end)
 
       options =
-        ([numbers] ++
-           (numbers
-            |> Stream.with_index()
-            |> Enum.map(fn {_x, i} -> List.delete_at(numbers, i) end)))
-        |> IO.inspect(charlists: :as_lists)
+        [numbers] ++
+          (numbers
+           |> Stream.with_index()
+           |> Enum.map(fn {_x, i} -> List.delete_at(numbers, i) end))
 
       Enum.any?(options, fn list ->
         diffs =
