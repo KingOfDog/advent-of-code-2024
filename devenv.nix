@@ -5,7 +5,7 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [ pkgs.git pkgs.grc pkgs.elixir_ls ];
 
   # https://devenv.sh/languages/
   languages.elixir.enable = true;
