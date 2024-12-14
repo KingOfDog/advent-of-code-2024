@@ -19,7 +19,6 @@ defmodule AdventOfCode.Day07 do
 
   def find_possible_results(operands) do
     operands
-    |> IO.inspect()
     |> Enum.reduce([], fn x, acc ->
       if Enum.empty?(acc) do
         [x]
