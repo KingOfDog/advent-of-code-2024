@@ -40,14 +40,8 @@ defmodule AdventOfCode.Day10 do
 
   defp parse(args) do
     args
-    |> String.split()
-    |> Enum.map(fn line -> String.to_charlist(line) end)
-    |> Enum.with_index(fn row, y ->
-      row
-      |> Enum.with_index(fn c, x -> {{x, y}, c - ?0} end)
-    end)
-    |> Enum.concat()
-    |> Map.new()
+    |> AdventOfCode.Helpers.string_rows_to_chars()
+    |> AdventOfCode.Helpers.grid_to_choords()
   end
 
   defp find_trailheads(coords) do
